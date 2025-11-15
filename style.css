@@ -1,0 +1,63 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Xanh da trời nhạt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.weather-container{
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style thanh tìm kiếm */
+
+.search-box{
+    display: flex;
+    margin-bottom: 20px;
+}
+#city-input{
+    flex-grow: 1; /* Chiếm hết chỗ */
+    border: 2px solid#ddd;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+#search-btn{
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Style kết quả (sau khi JS "vẽ" ra) */
+
+#weather-result{
+    animation: fadeIn 0.5s; /* Hiệu ứng mờ rồi hiện */
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#city-name{
+    font-size: 28px;
+    margin: 10px 0;
+}
+#temperature{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+#description{
+    font-size: 20px;
+    color: #777;
+    text-transform: capitalize; /* Tự động viết hoa chữ cái đầu */
+}
